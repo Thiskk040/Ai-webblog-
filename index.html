@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css">
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation-float.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+    <title>WEBBLOG AI</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo" src="heart.jpg" alt="HEART PICS">
+        <h1 class="name">WEBLOG AI</h1>
+        <div class="social-img">
+            <ul>
+                <li><a id="github" target="_blank"><i class="fa tw fa-github"></i></a></li>
+                <li><a id="facebook" target="_blank"><i class="fa tw fa-google"></i></a></li>
+            </ul>
+        </div>
+        <div id="assign">
+            <h3>CONTENTS</h3>
+            <ul>
+                <a href="#sec1"><button id="ass1"> 1.Import Data </button></a>
+                <a href="#sec2"><button id="ass2"> 2.Exploratory</button></a>
+                <a href="#sec3"><button id="ass3"> 3.Observations</button></a>
+                <a href="#sec4"><button id="ass4"> 4.Scatter Plot</button></a>
+            </ul>
+            <ul>
+                <a href="#sec5"><button id="ass5"> 5.Correlation</button></a>
+                <a href="#sec6"><button id="ass6"> 6.Data processing</button></a>
+                <a href="#sec7"><button id="ass7"> 7.Logistic Regression</button></a>
+                <a href="#sec8"><button id="ass8"> 8. Conclusion</button></a>
+            </ul>
+        </div>
+        <hr>
+        <span class="sologan">Heart Disease Prediction using Machine Learning</span>
+        <p class="bio">
+            การวินิจฉัยโรคหัวใจเป็นความท้าทายที่ใหญ่ที่สุดในอุตสาหกรรมการแพทย์และอาศัยปัจจัยต่างๆ เช่น การตรวจร่างกาย
+            และการแสดงอาการของผู้ป่วยซึ่ง
+        </p>
+        <p class="bio">
+            ปัจจัยที่มีอิทธิพลต่อโรคหัวใจ ได้แก่ ระดับคอเลสเตอรอลในร่างกาย พฤติกรรมการสูบบุหรี่และโรคอ้วน
+            ประวัติการเจ็บป่วยในครอบครัว ความดันโลหิต และสภาพแวดล้อมในการทำงาน
+        </p>
+        <p class="bio">
+            โดยการใช้อัลกอริทึมโดยใช้ภาษา Python
+            เพื่อเรียนรู้ในการทำนายโรคหัวใจซึ่งปัจจุบันความก้าวหน้าทางเทคโนโลยีทำให้สามารถรวมเข้ากับ Big Data
+            เพื่อจัดการข้อมูลที่ไม่มีโครงสร้างและเพิ่มขึ้นอย่างทวีคูณ
+        <p class="bio">
+            โรคหัวใจถูกมองว่าเป็นโรคที่คร่าชีวิตมนุษย์มากที่สุดในโลก โดยเฉพาะอย่างยิ่งในโรคประเภทนี้
+            หัวใจไม่สามารถส่งเลือดในปริมาณที่ต้องการไปยังอวัยวะที่เหลือของร่างกายมนุษย์เพื่อทำหน้าที่ปกติได้
+        </p>
+        <hr>
+        <!--Importdata 1-->
+        <section id="sec1">
+            <span class="sologan">Import Data</span>
+            <img id="p1" src="1.1.png" alt="project1">
+            <p class="bio">Import library ที่จำเป็นเข้ามาใช้ในการ Analysis Data ต่างๆ</p>
+            <p class="bio">และทำการ Import DataSet ที่ชื่อว่า Heart.csv เข้ามาเพื่อใช้ในการ Analysis</p>
+            <p class = "bio">
+                โหลด Data Base (Heart.csv) ---- > <a id = "font1" href="https://raw.githubusercontent.com/amankharwal/Website-data/master/heart.csv">Here</a> 
+             </p>
+            <img id="p1" src="1.2.png" alt="project2">
+            <p class="bio">จากการฟแท่งอันนี้เราจะเห็นว่า Database ที่เอามานั้นมีผู้ป่วยที่เป็นโรคหัวใจ (1) 165 คน
+                และผู้ป่วยที่ไม่เป็นโรคหัวใจ (0) 138 คน</p>
+            <img id="p1" src="1.3.png" alt="project2">
+            <p class="bio">การตรวจเช็คค่าที่ผิดพลาดต่างๆใน Datasetและจะพบว่า Dataset ที่เอามาเป็น Dataset
+                ที่ดีมากไม่มีค่า Error หรือ ค่า Null เลย </p>
+            <hr>
+        </section>
+        <!--Exploratory 2 -->
+        <section id="sec2">
+            <span class="sologan">Exploratory Data Analysis</span>
+            <img id="p1" src="1.4.png" alt="project2">
+            <p class="bio">จากกราฟด้านล่าง เราจะสังเกตุเห็น Figure ได้ 6 Figure โดยแต่ละอันมีความหมายดังนี้</p>
+            <p class="bio">1.cp(Chest pain) = อาการเจ็บหน้าอกโดยจากที่สังเกตุคือผู้ที่มี CP 1,2,3
+                จะมีโอกาศที่จะเป็นโรคหัวใจมากกว่าผู้ที่มี CP 0</p>
+            <p class="bio">2.restecg = ค่าของสัญญาณ EKG คนที่มีค่า 1
+                จะมีแนวโน้มที่จะเป็นโรคหัวใจและเกี่ยวกับการเต้นของหัวใจที่ผิดจังหวะ</p>
+            <p class="bio">3.exang(exercise-include angina) = โดยคนที่มีค่า 0. คือคนที่เป็น
+                anginaที่เกิดจากการออกกำลังกายส่วน คนที่มีค่าเป็น 1 คือคนที่เป็น angina โดยที่ไม่ออกกำลังกาย **angina
+                คือ อาการเจ็บหน้าอก</p>
+            <p class="bio">4. Slope = ค่าความชันของค่า ST ซึ่งเกิดขึ้นเมื่อร่างกายออกกำลังกายมากที่สุด
+                โดยคนที่มีค่าความชันเท่ากับ 2 = สัญญาณของหัวใจไม่แข็งแรง และคนที่มีค่าความชันเท่ากับ 1
+                เป็นคนที่หัวใจแข็งแรงปกติ (ค่าความชัน:อัตราการเต้นของหัวใจที่ดีที่สุด)</p>
+            <p class="bio">5. ca = จำนวนของหลอดเลือดใหญ่ที่ทำการย้อมสีด้วย fluoroscopy
+                ซึี่งถ้าเลือดเคลื่อนตัวได้ดีผู้ที่มีค่า ca = 0 เป็นคนที่มีความเสี่ยงที่จะเป็นโรคหัวใจ</p>
+            <p class="bio">6. thal = คนที่เคยมีแนวโน้มที่เคยเป็นโรคหัวใจและรักษาหัวใจให้หายดีแล้ว thal = 2
+                เป็นคนที่หายแล้วแต่ยังคงมีแนวโน้มในการเป็นโรคหัวใจอยู่</p>
+            <img id="p1" src="1.5.png" alt="project2">
+            <hr>
+        </section>
+        <!--Observational 3-->
+        <section id="sec3">
+            <span class="sologan">Observations</span>
+            <img id="p1" src="1.6.png" alt="project2">
+            <p class="bio">จากกราฟด้านล่าง เราจะสังเกตุเห็น Figure ได้ 6 Figure โดยแต่ละอันมีความหมายดังนี้</p>
+            <p class="bio">1.trestbps: ความดันโลหิตสูงกว่า 130-140 โดยทั่วไปเป็นเรื่องที่น่ากังวล</p>
+            <p class="bio">2.chol: ค่าcholมากกว่า 200 เป็นเรื่องที่น่าเป็นห่วง</p>
+            <p class="bio">3.thalach: ผู้ที่มีจำนวนสูงสุดมากกว่า 140 คนมีแนวโน้มที่จะเป็นโรคหัวใจ</p>
+            <p class="bio">4.oldpeak: ST
+                ที่เกิดจากการออกกำลังกายเทียบกับการพักผ่อนดูที่ความเครียดของหัวใจในระหว่างการออกกำลังกาย
+                หัวใจที่ไม่แข็งแรงจะมีความเสี่ยงที่จะเป็นโรคหัวใจมากขึ้น</p>
+            <img id="p1" src="1.7.png" alt="project2">
+            <hr>
+        </section>
+        <!--Scatter Plot  4-->
+        <section id="sec4">
+            <span class="sologan">Sclatter Plot</span>
+            <img id="p1" src="1.8.png" alt="project2">
+            <p class="bio">กราฟในรูปแบบจุดซึ่งเป็นการหาอัตราการเป็นโรคหัวใจเมื่อเปรียบเทียบระหว่าง อายุ และ
+                อัตราการเต้นของหัวใจ</p>
+            <img id="p1" src="1.9.png" alt="project2">
+            <hr>
+        </section>
+        <!--Observational from correlation 5-->
+        <section id="sec5">
+            <span class="sologan">Correlation</span>
+            <img id="p1" src="2.0.png" alt="project2">
+            <p class="bio">1. fbs และ chol เป็นตัวแปรที่มีความสัมพันธ์ในการเกิดโรคหัวใจน้อยที่สุด</p>
+            <p class="bio">2. ตัวแปรอื่นๆมีความสัมพันธุ์อย่างมีนัยยะสำคัญกับผู้ป่วย</p>
+            <hr>
+        </section>
+        <!--Dataprocessing 6-->
+        <section id="sec6">
+            <span class="sologan">Data Processing</span>
+            <p class="bio">หลังจากสำรวจชุดข้อมูลแล้ว
+                เราสังเกตได้ว่าเราต้องแปลงตัวแปรตามหมวดหมู่เป็นตัวแปรจำลองและปรับขนาดค่าทั้งหมดก่อนที่จะฝึกโมเดลแมชชีนเลิร์นนิ่ง
+            </p>
+            <p class="bio">สำหรับงานนี้ โดยใช้เมธอด get_dummies เพื่อสร้างคอลัมน์จำลองสำหรับตัวแปรตามหมวดหมู่</p>
+            <img id="p1" src="2.1.png" alt="project2">
+            <hr>
+        </section>
+        <!--Applying Logistic Regression 7 -->
+        <section id="sec7">
+            <span class="sologan">Logistic Regression</span>
+            <p class="bio">การฝึกโมเดลแมชชีนเลิร์นนิงสำหรับการทำนายโรคหัวใจ
+                โดยใช้อัลกอริทึมโลจิสติกตามที่กล่าวไว้ในตอนต้นของบทความ แต่ก่อนฝึกโมเดลโดยกำหนดฟังก์ชัน</p>
+            <p class="bio">ตัวช่วยสำหรับการพิมพ์รายงานการจำแนกประสิทธิภาพของโมเดลแมชชีนเลิร์นนิงก่อน</p>
+            <img id="p1" src="2.2.png" alt="project2">
+            <p class="bio">แบ่งข้อมูลออกเป็นการฝึกอบรม 70% และการทดสอบ 30%</p>
+            <img id="p1" src="2.3.png" alt="project2">
+            <hr>
+        </section>
+        <section id="sec8">
+            <span class="sologan">Conclusion</span>
+            <p class="bio">จากที่เห็นแล้วว่าอัลกอลิทึ่มทำงานได้ดีมากในชุดทดสอบและมีความแม่นยำถึง 86.79% ทั้งการ Training
+                และ
+                Testing ซึ่งนั้นเห็นได้ว่า อัลกอลิทึ่มที่ผู้จัดทำมา</p>
+            <p class="bio">นั้นมีประสิทธิภาพในการจำแนกระหว่างผู้ป่วยที่เป็นโรคหัวใจและไม่ได้เป็นโรคหัวใจ</p>
+            <img id="p1" src="2.4.png" alt="project2">
+            <hr>
+        </section>
+
+        <button><input type="submit" id="button1" value="Refrenece Link ">
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
